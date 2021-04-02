@@ -1,6 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf8 -*-
 """
+    apt install python3-ipaddr
+    or
+    pip3 install ipaddr
+
 	Given an IPv6 address or IPv6 network prefix, it shows all information
         about assignable addresses and address formats.
 """
@@ -98,7 +102,7 @@ def get_binary_address(addr, is_network = False, use_colors = False):
     bin_str = bin(int(addr)).replace("0b","").zfill(128)
     out_str = ""
     if is_network and use_colors: out_str += bcolors.OKBLUE
-    for i in xrange(128):
+    for i in ipaddr.xrange(128):
         if is_network and i == addr.prefixlen and use_colors:
             out_str += bcolors.ENDC
         if (i % 16 == 0) and i != 0:

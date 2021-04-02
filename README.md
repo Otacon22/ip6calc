@@ -1,4 +1,4 @@
-# ip6calc
+# (Otacon22/ip6calc) Python3 Bugfix by Gabriel Padilha
 IPv6 version of "ipcalc" program.
 It is useful for doing countings of IPv6 addresses, subnets, available addresses, subnets slices, etc..
 
